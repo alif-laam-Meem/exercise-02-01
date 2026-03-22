@@ -1,5 +1,5 @@
 name: Second
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   job1:
     name: First Job
@@ -16,7 +16,7 @@ jobs:
     name: Second Job
     runs-on: windows-latest
     steps:
-      - name: Step one
+      - name: Step oneS
         uses: actions/checkout@v3
       - name: Step two
         shell: pwsh
